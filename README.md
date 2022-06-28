@@ -1,1 +1,1 @@
-<title style="text-decoration:bold; text-align:center">Face Recognition </title>
+<span style="text-decoration:bold; text-align:center">Face Recognition </span>
