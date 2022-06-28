@@ -8,7 +8,7 @@ Adapted by Alioune LO - Z01D3R @ 7Jun2022
 
 import cv2
 import time
-
+import matplotlib.pyplot as plt
 
 
 #-- Detect and display Face
@@ -30,20 +30,29 @@ haar_cascade =  cv2.CascadeClassifier('../opencv-3.4/data/haarcascades/haarcasca
 lbp_cascade = cv2.CascadeClassifier('../opencv-3.4/data/lbpcascades/lbpcascade_frontalface.xml')
 img = cv2.imread('../images/multiFace.jpeg')
 
+
+
 #-- Time execution for LBP cascade
 ta = time.time()
-detectFaces(lbp_cascade,img)
+lbp = detectFaces(lbp_cascade,img)
 tb = time.time()
 dt = tb- ta
-print(dt)
-
 
 #-- Time execution for Haar Cascade 
 t1 = time.time()
-detectFaces(haar_cascade,img)
+haar = detectFaces(haar_cascade,img)
 t2 = time.time()
 dt1 = t2 - t1
-print(dt1) 
+
+#-- Let's do the comparison
+f, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
+
+ax1.set_title('Haar Detection time: ' + str(round(dt1, 3)) + ' secs')
+ax1.imshow(haar)
+
+ax2.set_title('LBP Detection time: ' + str(round(dt, 3)) + ' secs')
+ax2.imshow(lbp)
+
 
 
 cv2.waitKey(0)
