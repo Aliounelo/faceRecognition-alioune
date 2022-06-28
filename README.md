@@ -4,7 +4,8 @@
 This little project is study about as the title specifies : facial recognition. There are many algorithms for 
 this, that's why we will focus on the theorical aspect of three techniques : 
 <ul><li>Haar Cascade Classifiers</li>
-<ul><li>Local Binary Pattern Histograms</li>
-<ul><li>YOLO (You Only Look Once) algorithms</li>
+<li>Local Binary Pattern Histograms</li>
+<li>YOLO (You Only Look Once) algorithms</li>
+ </ul>
 
-<span style="fontcolor:gray; text-align:center">We will do a summary and a why we choosed this for this ? In what is it better ? ...</span>
+<span style="fontcolor:gray;">We will do a summary and a why we choosed this for this ? In what is it better ? ...</span>
